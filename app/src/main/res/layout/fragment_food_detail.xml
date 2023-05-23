@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="choseFood"
+            type="com.example.foodbookprojectbtk.model.Food" />
+    </data>
+    
+    
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.FoodDetailFragment">
+
+        <ImageView
+            android:id="@+id/ivFoodImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            android:minHeight="200dp"
+            android:scaleType="fitCenter"
+            android:downloadImage="@{choseFood.foodImage}">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvFoodName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivFoodImage"
+            android:text="@{choseFood.foodName}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tvFoodCalori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFoodName"
+            android:text="@{choseFood.foodCalori}"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="7dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tvFoodCarbnhdrt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFoodCalori"
+            android:text="@{choseFood.foodCarbonhdrt}"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="7dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvFoodProtein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFoodCarbnhdrt"
+            android:text="@{choseFood.foodProtein}"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="7dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tvFoodOil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFoodProtein"
+            android:text="@{choseFood.foodOil}"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="7dp">
+
+        </TextView>
+
+    </RelativeLayout>
+</layout>

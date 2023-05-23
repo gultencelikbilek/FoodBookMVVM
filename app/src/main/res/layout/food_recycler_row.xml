@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="food"
+            type="com.example.foodbookprojectbtk.model.Food" />
+    <variable
+        name="listener"
+        type="com.example.foodbookprojectbtk.adapter.FoodClickListener" />
+    </data>
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="horizontal"
+    android:onClick="@{listener::foodClicked}">
+    <TextView
+        android:id="@+id/fooduuid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@{String.valueOf(food.uuid)}">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/ivPic"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:layout_weight="2"
+        android:downloadImage="@{food.foodImage}">
+
+
+
+    </ImageView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/tvFoodNameRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{food.foodName}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_margin="5dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tvFoodCaloriRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{food.foodCalori}"
+            android:textSize="18sp"
+            android:layout_margin="5dp">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+</layout>
